@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/navbar'
-import Herosection from './components/herosection'
+import HomePage from './components/homePage.jsx'
 import {RouterProvider,createBrowserRouter} from 'react-router';
 import Allcourses from './components/allcourses';
 import Layout from './components/layout';
@@ -17,7 +17,7 @@ function App() {
       path:"/",
       element:<Layout/>,
       children:[
-        {path:"/",element:<Herosection/>},
+        {path:"/",element:<HomePage/>},
         {path:"/allcourses",element:<Allcourses/>},
         {path:'/allcategory',element:<AllCategories/>},
         {path:"/demoVideos",element:""},
