@@ -7,11 +7,11 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { PiCertificateBold } from "react-icons/pi";
 import { FaRegFileCode, FaArrowRight } from "react-icons/fa";
 
-import { categories } from '../components/data/categoryicon.jsx';
-import coursesData from '../components/data/courseData';
-import feedbackData from '../components/data/categoryicon';
+import { categories } from './data/categoryicon.jsx';
+import coursesData from './data/courseData.jsx';
+import feedbackData from './data/categoryicon.jsx';
 
-import Footer from '../components/footer.jsx';
+import Footer from './footer.jsx';
 
 
 import { useNavigate } from 'react-router-dom';
