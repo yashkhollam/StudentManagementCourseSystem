@@ -8,11 +8,11 @@ import { PiCertificateBold } from "react-icons/pi";
 import { FaRegFileCode, FaArrowRight } from "react-icons/fa";
 
 import { categories } from '../components/data/categoryicon.jsx';
-import { featuredCourses } from '../components/data/categoryicon';
+import coursesData from '../components/data/courseData';
 import feedbackData from '../components/data/categoryicon';
 
 import Footer from '../components/footer.jsx';
-import HowItWorks from '../page/howitworks.jsx';
+
 
 import { useNavigate } from 'react-router-dom';
 
@@ -171,89 +171,92 @@ function Hero() {
 
       {/* FEATURED COURSES */}
 
-      <section className="course-filter-section">
+    <section className="course-filter-section">
 
-        <div className="d-flex justify-content-between align-items-center px-3 px-md-5 mb-4">
+  <div className="d-flex justify-content-between align-items-center px-3 px-md-5 mb-4">
 
-          <p className="fw-bold fs-4 mb-0">
-            Featured Courses
-          </p>
+    <p className="fw-bold fs-4 mb-0">
+      Featured Courses
+    </p>
 
-          <div
-            className="viewallcoursecontainer"
-            onClick={() => navigate('/allcourses')}
-          >
-            <p className="viewtext mb-0">
-              All Courses
-            </p>
+    <div
+      className="viewallcoursecontainer"
+      onClick={() => navigate('/allcourses')}
+    >
+      <p className="viewtext mb-0">
+        All Courses
+      </p>
 
-            <FaArrowRight />
+      <FaArrowRight />
+
+    </div>
+
+  </div>
+
+  <div className="featured_course_container">
+
+    {coursesData.slice(0, 3).map((course) => (
+
+      <div
+        className="course_card"
+        key={course.id}
+        onClick={() => navigate(`/courses/${course.id}`)}
+        style={{ cursor: 'pointer' }}
+      >
+
+        <div className="row g-0 h-100">
+
+          {/* COURSE IMAGE */}
+
+          <div className="col-12 col-md-6">
+
+            <img
+              src={course.image}
+              alt={course.title}
+              className="course_image"
+            />
 
           </div>
 
-        </div>
+          {/* COURSE CONTENT */}
 
+          <div className="col-12 col-md-6">
 
-        <div className="featured_course_container">
+            <div className="featured_course_content">
 
-          {featuredCourses.map((course) => (
+              {course.badge && (
+                <span className="course-badge">
+                  {course.badge}
+                </span>
+              )}
 
-            <div className="course_card" key={course.id}>
+              <h5>{course.title}</h5>
 
-              <div className="row g-0 h-100">
+              <p>{course.description}</p>
 
-                {/* COURSE IMAGE */}
+              <p>⭐ {course.rating}</p>
 
-                <div className="col-12 col-md-6">
+              <div className="d-flex justify-content-between flex-wrap gap-2">
 
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="course_image"
-                  />
+                <p>{course.duration}</p>
 
-                </div>
-
-
-                {/* COURSE CONTENT */}
-
-                <div className="col-12 col-md-6">
-
-                  <div className="featured_course_content">
-
-                    {course.badge && (
-                      <span className="course-badge">
-                        {course.badge}
-                      </span>
-                    )}
-
-                    <h5>{course.title}</h5>
-
-                    <p>{course.description}</p>
-
-                    <p>⭐ {course.rating}</p>
-
-                    <div className="d-flex justify-content-between flex-wrap gap-2">
-
-                      <p>{course.duration}</p>
-
-                      <p>{course.level}</p>
-
-                    </div>
-
-                  </div>
-
-                </div>
+                <p>{course.level}</p>
 
               </div>
 
             </div>
 
-          ))}
+          </div>
 
         </div>
 
-      </section>
+      </div>
+
+    ))}
+
+  </div>
+
+</section>
 
 
 
