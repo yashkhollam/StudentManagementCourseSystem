@@ -1,12 +1,47 @@
 import React from 'react'
 import Navbar from './components/navbar'
 import Herosection from './components/herosection'
+import {RouterProvider,createBrowserRouter} from 'react-router';
+import Allcourses from './components/allcourses';
+import Layout from './components/layout';
+import HowItWorks from './page/howitworks';
+import AllCategories from './page/Allcategory';
+import CourseDetails from './page/courseDetails';
+
 
 function App() {
+
+
+  const router=createBrowserRouter([
+    {
+      path:"/",
+      element:<Layout/>,
+      children:[
+        {path:"/",element:<Herosection/>},
+        {path:"/allcourses",element:<Allcourses/>},
+        {path:'/allcategory',element:<AllCategories/>},
+        {path:"/demoVideos",element:""},
+        {path:"/courseCategories",element:""},
+        {path:'/howitworks',element:<HowItWorks/>},
+        {path:"/courses/:id",element:<CourseDetails />}
+      ]
+    }
+  ])
+
+
+
+
+
+
+
   return (
     <>
-      {/* <Navbar/> */}
-      <Herosection/>
+     
+     <RouterProvider router={router}/>
+
+    
+
+
     </>
   )
 }

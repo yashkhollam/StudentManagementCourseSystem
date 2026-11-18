@@ -237,6 +237,10 @@
     color: #a77bff;
 }
 
+.footer_links li {
+    cursor: pointer;
+}
+
 
 /* ==========================
    TABLET
@@ -281,3 +285,6 @@
     }
 
 }
+
+
+

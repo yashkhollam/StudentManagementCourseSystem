@@ -1,5 +1,6 @@
-
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import '../css/Footer.css';
 
 import {
@@ -8,7 +9,6 @@ import {
     FaInstagram,
     FaLinkedinIn,
     FaTwitter,
-    FaArrowRight,
     FaEnvelope,
     FaPhone,
     FaLocationDot
@@ -16,19 +16,20 @@ import {
 
 const Footer = () => {
 
-    return (
+    const navigate = useNavigate();
 
+    return (
         <footer className="main_footer">
 
             <div className="footer_container">
 
                 <div className="row g-4">
 
-                  
+                    {/* BRAND */}
 
                     <div className="col-lg-4 col-md-6">
 
-                        <div className="footer_logo">
+                        <div className="footer_logo" onClick={() => navigate('/')}>
                             <FaGraduationCap />
                             <span>EduLearn</span>
                         </div>
@@ -40,76 +41,84 @@ const Footer = () => {
                         </p>
 
                         <div className="footer_social_links">
-
-                            <a href="#" aria-label="Facebook">
-                                <FaFacebookF />
-                            </a>
-
-                            <a href="#" aria-label="Instagram">
-                                <FaInstagram />
-                            </a>
-
-                            <a href="#" aria-label="LinkedIn">
-                                <FaLinkedinIn />
-                            </a>
-
-                            <a href="#" aria-label="Twitter">
-                                <FaTwitter />
-                            </a>
-
+                            <a href="#"><FaFacebookF /></a>
+                            <a href="#"><FaInstagram /></a>
+                            <a href="#"><FaLinkedinIn /></a>
+                            <a href="#"><FaTwitter /></a>
                         </div>
 
                     </div>
 
 
-                   
+                    {/* QUICK LINKS */}
+
                     <div className="col-lg-2 col-md-6">
 
-                        <h5 className="footer_heading">
-                            Quick Links
-                        </h5>
+                        <h5 className="footer_heading">Quick Links</h5>
 
                         <ul className="footer_links">
 
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/courses">All Courses</a></li>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/instructors">Instructors</a></li>
-                            <li><a href="/contact">Contact Us</a></li>
+                            <li onClick={() => navigate('/')}>Home</li>
+
+                            <li onClick={() => navigate('/allcourses')}>
+                                All Courses
+                            </li>
+
+                            <li onClick={() => navigate('/allcategory')}>
+                                All Categories
+                            </li>
+
+                            <li onClick={() => navigate('/howitworks')}>
+                                How It Works
+                            </li>
+
+                            <li onClick={() => navigate('/contact')}>
+                                Contact Us
+                            </li>
 
                         </ul>
 
                     </div>
 
 
-                 
+                    {/* CATEGORIES */}
 
                     <div className="col-lg-2 col-md-6">
 
-                        <h5 className="footer_heading">
-                            Categories
-                        </h5>
+                        <h5 className="footer_heading">Categories</h5>
 
                         <ul className="footer_links">
 
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">Programming</a></li>
-                            <li><a href="#">Data Science</a></li>
-                            <li><a href="#">UI/UX Design</a></li>
-                            <li><a href="#">Database</a></li>
+                            <li onClick={() => navigate('/allcategory')}>
+                                Web Development
+                            </li>
+
+                            <li onClick={() => navigate('/allcategory')}>
+                                Programming
+                            </li>
+
+                            <li onClick={() => navigate('/allcategory')}>
+                                Data Science
+                            </li>
+
+                            <li onClick={() => navigate('/allcategory')}>
+                                UI/UX Design
+                            </li>
+
+                            <li onClick={() => navigate('/allcategory')}>
+                                Database
+                            </li>
 
                         </ul>
 
                     </div>
 
 
-                   
+                    {/* CONTACT */}
 
                     <div className="col-lg-4 col-md-6">
 
-                        <h5 className="footer_heading">
-                            Get In Touch
-                        </h5>
+                        <h5 className="footer_heading">Get In Touch</h5>
 
                         <ul className="footer_contact">
 
@@ -130,27 +139,19 @@ const Footer = () => {
 
                         </ul>
 
-
                     </div>
 
                 </div>
 
-
-               
                 <hr className="footer_divider" />
 
                 <div className="footer_bottom">
 
-                    <p>
-                        © 2026 EduLearn. All Rights Reserved.
-                    </p>
+                    <p>© 2026 EduLearn. All Rights Reserved.</p>
 
                     <div className="footer_bottom_links">
-
                         <a href="#">Privacy Policy</a>
-
                         <a href="#">Terms & Conditions</a>
-
                     </div>
 
                 </div>
@@ -158,9 +159,7 @@ const Footer = () => {
             </div>
 
         </footer>
-
     );
-
 };
 
 export default Footer;

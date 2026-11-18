@@ -1,16 +1,26 @@
+
 import {
   FaCode,
   FaLaptopCode,
   FaDatabase,
   FaBrain,
   FaBug,
-  FaComputer
+  FaComputer,
+  FaMobileScreenButton,
+  FaCloud,
+  FaGears,
+  FaShieldHalved,
+  FaPenRuler,
+  FaSitemap
 } from "react-icons/fa6";
 
+// Online dummy images
+const reactimg = "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600";
 
-import reactimg from '../assets/React Complete Guide Bestseller Banner.png'
-import nodeimg from '../assets/Node.js Backend Mastery Banner.png'
-import sqlimg from '../assets/MySQL for Developers Course Thumbnail.png'
+const nodeimg = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600";
+
+const sqlimg = "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600";
+
 
 export const categories = [
   {
@@ -60,9 +70,56 @@ export const categories = [
     coursesCount: 9,
     bgColor: "#E0E7FF",
     fontColor: "#4F46E5"
-  }
+  },
+  {
+  id: 7,
+  name: "Mobile App Development",
+  icon: FaMobileScreenButton,
+  coursesCount: 6,
+  bgColor: "#DBEAFE",
+  fontColor: "#2563EB"
+},
+{
+  id: 8,
+  name: "Cloud Computing",
+  icon: FaCloud,
+  coursesCount: 5,
+  bgColor: "#E0F2FE",
+  fontColor: "#0284C7"
+},
+{
+  id: 9,
+  name: "DevOps",
+  icon: FaGears,
+  coursesCount: 7,
+  bgColor: "#F1F5F9",
+  fontColor: "#475569"
+},
+{
+  id: 10,
+  name: "Cyber Security",
+  icon: FaShieldHalved,
+  coursesCount: 8,
+  bgColor: "#FEE2E2",
+  fontColor: "#DC2626"
+},
+{
+  id: 11,
+  name: "UI/UX Design",
+  icon: FaPenRuler,
+  coursesCount: 6,
+  bgColor: "#FCE7F3",
+  fontColor: "#DB2777"
+},
+{
+  id: 12,
+  name: "Software Engineering",
+  icon: FaSitemap,
+  coursesCount: 9,
+  bgColor: "#EDE9FE",
+  fontColor: "#7C3AED"
+}
 ];
-
 
 
 export const featuredCourses = [
@@ -92,7 +149,7 @@ export const featuredCourses = [
     id: 3,
     title: "MySQL for Developers",
     description: "Learn SQL from basics to advanced.",
-    image:sqlimg ,
+    image: sqlimg,
     rating: 4.8,
     totalStudents: 1600,
     duration: "14 Hours",
@@ -102,10 +159,7 @@ export const featuredCourses = [
 ];
 
 
-
-
-//
-
+// Student Feedback
 
 const feedbackData = [
   {
@@ -114,8 +168,7 @@ const feedbackData = [
     image: "https://i.pravatar.cc/150?img=12",
     course: "Full Stack Web Development",
     role: "MERN Stack Developer",
-    feedback:
-      "This course helped me understand full stack development from scratch. The practical projects improved my confidence and helped me become job-ready.",
+    feedback: "This course helped me understand full stack development from scratch. The practical projects improved my confidence and helped me become job-ready."
   },
   {
     id: 2,
@@ -123,8 +176,7 @@ const feedbackData = [
     image: "https://i.pravatar.cc/150?img=47",
     course: "Frontend Development",
     role: "Frontend Developer",
-    feedback:
-      "I had very little coding knowledge before joining this course. The teaching approach and hands-on assignments made learning frontend development easy.",
+    feedback: "I had very little coding knowledge before joining this course. The teaching approach and hands-on assignments made learning frontend development easy."
   },
   {
     id: 3,
@@ -132,8 +184,7 @@ const feedbackData = [
     image: "https://i.pravatar.cc/150?img=13",
     course: "Java Full Stack Development",
     role: "Java Developer",
-    feedback:
-      "The course provided excellent practical knowledge. Building real-world applications helped me understand backend development and database management.",
+    feedback: "The course provided excellent practical knowledge. Building real-world applications helped me understand backend development and database management."
   },
   {
     id: 4,
@@ -141,8 +192,7 @@ const feedbackData = [
     image: "https://i.pravatar.cc/150?img=44",
     course: "Python Development",
     role: "Python Developer",
-    feedback:
-      "The instructors explained every concept with practical examples. I especially enjoyed working on projects that helped me improve my problem-solving skills.",
+    feedback: "The instructors explained every concept with practical examples. I especially enjoyed working on projects that helped me improve my problem-solving skills."
   },
   {
     id: 5,
@@ -150,8 +200,7 @@ const feedbackData = [
     image: "https://i.pravatar.cc/150?img=14",
     course: "MERN Stack Development",
     role: "Full Stack Developer",
-    feedback:
-      "A great learning experience! I learned how to develop complete web applications and gained confidence in working with modern technologies.",
+    feedback: "A great learning experience! I learned how to develop complete web applications and gained confidence in working with modern technologies."
   },
   {
     id: 6,
@@ -159,8 +208,7 @@ const feedbackData = [
     image: "https://i.pravatar.cc/150?img=45",
     course: "UI/UX Design",
     role: "UI/UX Designer",
-    feedback:
-      "This course helped me understand design principles and user experience. The practical assignments gave me the confidence to create my own designs.",
+    feedback: "This course helped me understand design principles and user experience. The practical assignments gave me the confidence to create my own designs."
   },
   {
     id: 7,
@@ -168,10 +216,8 @@ const feedbackData = [
     image: "https://i.pravatar.cc/150?img=15",
     course: "Data Science",
     role: "Data Scientist",
-    feedback:
-      "The structured curriculum and practical exercises made complex data science concepts easier to understand. I highly recommend this course.",
-  },
+    feedback: "The structured curriculum and practical exercises made complex data science concepts easier to understand. I highly recommend this course."
+  }
 ];
 
 export default feedbackData;
-

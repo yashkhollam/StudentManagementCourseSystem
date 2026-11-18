@@ -1,0 +1,140 @@
+.all-categories-section {
+    padding: 70px 0;
+    background: #f8f9ff;
+}
+
+/* Heading */
+
+.all-categories-heading {
+    margin-bottom: 35px;
+}
+
+.categories-tag {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #eee7ff;
+    color: #7138e8;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.all-categories-heading h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #172033;
+}
+
+.all-categories-heading h2 span {
+    color: #7138e8;
+}
+
+.all-categories-heading p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Search */
+
+.category-search-box {
+    max-width: 500px;
+    margin: 0 auto 35px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 14px 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    color: #64748b;
+}
+
+.category-search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Result Info */
+
+.category-result-info {
+    margin-bottom: 20px;
+}
+
+.category-result-info h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #172033;
+}
+
+/* Category Card */
+
+.all-category-card {
+    height: 100%;
+    padding: 25px 20px;
+    background: white;
+    border: 1px solid #eee9ff;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.all-category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(113, 56, 232, 0.1);
+}
+
+.all-category-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.all-category-card h5 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+.all-category-card p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.all-category-card button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    color: #7138e8;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.all-category-card button:hover {
+    gap: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .all-categories-section {
+        padding: 45px 0;
+    }
+
+    .all-categories-heading h2 {
+        font-size: 28px;
+    }
+
+}
